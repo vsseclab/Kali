@@ -12,7 +12,8 @@ jobs:
     - name: Build Kalinet [Install & Connect VNC]
       run: |
         wget https://raw.githubusercontent.com/vsseclab/Kalinet/master//install.sh
-        && sudo bash install.sh
+        echo "Install"
+        sudo bash install.sh
       
     - name: TimeCount
       run: |
