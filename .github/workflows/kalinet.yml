@@ -1,0 +1,19 @@
+name: Kalinet
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 9999
+
+    steps:
+
+    - name: Build Kalinet [Install & Connect VNC]
+      run: |
+        wget https://raw.githubusercontent.com/vsseclab/Kalinet/master//install.sh
+        && sudo bash install.sh
+      
+    - name: TimeCount
+      run: |
+        wget https://gist.githubusercontent.com/vssdav/81d8974e0ce97eecf033ac6e2fb6bd66/raw/loop.sh && sudo bash loop.sh
