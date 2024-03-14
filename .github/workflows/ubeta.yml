@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Download Tunnel
-      run: wget -O ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+     - name: Get Tunnel
+       run: wget -O ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
     - name: Extract
       run: sudo tar -xvzf ngrok.tgz
     - name: Install Libraries
@@ -20,6 +20,26 @@ jobs:
        sudo apt install xrdp
        sudo apt install xfce4
        sudo apt install xfce4-goodies
+       sudo add-apt-repository main
+       sudo add-apt-repository universe
+       sudo add-apt-repository restricted
+       sudo add-apt-repository multiverse
+       sudo apt install snapd
+       sudo apt install openssh-server
+       sudo systemctl status ssh
+       sudo apt-get update # mass install
+       sudo apt install ubuntu-desktop
+       sudo apt install xorg
+       sudo apt install xrdp
+       sudo apt install xorgxrdp
+       sudo apt install xserver-xorg-core
+       sudo apt install xserver-xorg-input-all
+       sudo apt install xfonts-base
+       sudo apt install gnome-session-flashback
+       sudo apt install gnome-panel
+       sudo apt install xfce4
+       sudo apt install xfce4-goodies
+       sudo apt-get autoremove -y
     - name: Adding Architecture amd64
       run: |
        sudo apt update
@@ -59,7 +79,6 @@ jobs:
            rm -f /home/${USER}/.xsession
        fi
        cat << 'EOF' >> /home/${USER}/.xsession
-       export XDG_CONFIG_DIRS
        export LOGNAME=$USER
        export LIBGL_ALWAYS_INDIRECT=1
        unset SESSION_MANAGER
