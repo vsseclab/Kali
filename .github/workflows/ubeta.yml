@@ -59,6 +59,7 @@ jobs:
            rm -f /home/${USER}/.xsession
        fi
        cat << 'EOF' >> /home/${USER}/.xsession
+       export XDG_CONFIG_DIRS
        export LOGNAME=$USER
        export LIBGL_ALWAYS_INDIRECT=1
        unset SESSION_MANAGER
