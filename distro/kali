@@ -4,23 +4,23 @@
 	apt-get update && apt-get upgrade --allow-unauthenticated -y && apt-get dist-upgrade -y  --allow-unauthenticated
 	kali=("kali-linux")
 	apt-get -f install ${kali[$1-1]} -y --allow-unauthenticated
-	 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
-    	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
+	apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
+    	apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
     	wget -q -O - https://archive.kali.org/archive-key.asc  | apt-key add
 	apt-get -f install -y  --allow-unauthenticated
-	sudo apt-get install linux-headers-generic -y
+	apt-get install linux-headers-generic -y
 	apt-get update && apt-get upgrade --allow-unauthenticated -y && apt-get dist-upgrade -y  --allow-unauthenticated
-        sudo apt install snapd
-        sudo apt install openssh-server
-        sudo systemctl status ssh
-        sudo apt install xorg
-        sudo apt install xrdp
-        sudo apt install xorgxrdp
-        sudo apt install xserver-xorg-core
-        sudo apt install xserver-xorg-input-all
-        sudo apt install gnome-session-flashback
-        sudo apt install gnome-panel
-        sudo apt install xfce4
-        sudo apt install xfce4-goodies
-        sudo apt-get autoremove -y
+        apt install snapd
+        apt install openssh-server
+        systemctl status ssh
+        apt install xorg
+        apt install xrdp
+        apt install xorgxrdp
+        apt install xserver-xorg-core
+        apt install xserver-xorg-input-all
+        apt install gnome-session-flashback
+        apt install gnome-panel
+        apt install xfce4
+        apt install xfce4-goodies
+        apt-get autoremove -y
 	echo -e "\n\n Installation Completed Successfully!!!"
