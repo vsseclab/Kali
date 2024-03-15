@@ -82,7 +82,7 @@ jobs:
         echo `cat /etc/xrdp/xrdp.ini`
 
     - name: Create Tunnel
-      run: ngrok tcp 3389
+      run: ngrok tcp 3389  &
     - name: Connection
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
     - name: Time
