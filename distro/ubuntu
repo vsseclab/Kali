@@ -1,0 +1,26 @@
+        add-apt-repository main
+        add-apt-repository universe
+        add-apt-repository restricted
+        add-apt-repository multiverse
+        apt install snapd
+        apt install openssh-server
+        systemctl status ssh
+        apt-get update # mass install
+        apt install ubuntu-desktop
+        apt install xorg
+        apt install xrdp
+        apt install xorgxrdp
+        apt install xserver-xorg-core
+        apt install xserver-xorg-input-all
+        apt install xfonts-base
+        apt install xfonts-75dpi
+        apt install xfonts-100dpi
+        apt install mate-core
+        apt install mate-desktop-environment
+        apt install mate-notification-daemon
+        apt install ubuntu-gnome-desktop
+        apt install gnome-session-flashback
+        apt install gnome-panel
+        apt install xfce4
+        apt install xfce4-goodies
+        apt-get autoremove -y
