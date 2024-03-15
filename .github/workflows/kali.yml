@@ -37,7 +37,8 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
 #      run: ngrok config add-authtoken $Env:NGROK_AUTH_TOKEN
     - name: Install Libraries
-      run: wget https://raw.githubusercontent.com/vsseclab/Ubeta/master/distro/kali
+      run: |
+        wget https://raw.githubusercontent.com/vsseclab/Kali/master/distro/kali
         sudo bash kali
     - name: Entry
       run: |
