@@ -23,4 +23,14 @@
         apt install xfce4
         apt install xfce4-goodies
         apt-get autoremove -y
-	echo -e "\n\n Installation Completed Successfully!!!"
+apt-get update && sudo apt-get upgrade
+			apt-get install xrdp -y
+			apt-get install xfce4 -y	
+			apt-get install xfce4 xfce4-goodies -y
+			apt-get install xfce4-terminal gnome-icon-theme-full tango-icon-theme -y
+			rm ~/.xsession
+			echo -e "#!/bin/bash
+				xrdb $HOME/.Xresources
+				startxfce4 &" >> ~/.xsession
+			/etc/init.d/xrdp start
+			echo -e "\nRDP Successfully.
