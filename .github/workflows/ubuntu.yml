@@ -1,6 +1,6 @@
 name: Ubuntu
 
-on: [workflow_dispatch]
+on: [push, workflow_dispatch]
 
 jobs:
   build:
@@ -38,8 +38,8 @@ jobs:
 #      run: ngrok config add-authtoken $Env:NGROK_AUTH_TOKEN
     - name: Install Libraries
       run: |
-        wget https://raw.githubusercontent.com/vsseclab/Kali/master/distro/kali
-        sudo bash kali
+        wget https://raw.githubusercontent.com/vsseclab/Ubuntu/master/distro/ubuntu
+        sudo bash ubuntu
     - name: Entry
       run: |
         sudo bash -c 'cat > /etc/polkit-1/localauthority.conf.d/02-allow-colord.conf' << EOF
