@@ -1,24 +1,13 @@
-#!/bin/bash
-	echo -e "deb http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
-	apt-get install kali-archive-keyring --allow-unauthenticated -y
-	apt-get update && apt-get upgrade --allow-unauthenticated -y && apt-get dist-upgrade -y  --allow-unauthenticated
-	kali=("kali-linux")
-	apt-get -f install ${kali[$1-1]} -y --allow-unauthenticated
-	apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
-    	apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
-    	wget -q -O - https://archive.kali.org/archive-key.asc  | apt-key add
-	apt-get -f install -y  --allow-unauthenticated
-	apt-get install linux-headers-generic -y
-	apt-get update && apt-get upgrade --allow-unauthenticated -y && apt-get dist-upgrade -y  --allow-unauthenticated
+        apt install snapd
+        apt install openssh-server
+        systemctl status ssh
+        apt install xorg
+        apt install xrdp
+        apt install xorgxrdp
+        apt install xserver-xorg-core
+        apt install xserver-xorg-input-all
+        apt install gnome-session-flashback
+        apt install gnome-panel
+        apt install xfce4
+        apt install xfce4-goodies
         apt-get autoremove -y
-apt-get update && sudo apt-get upgrade
-			apt-get install xrdp -y
-			apt-get install xfce4 -y	
-			apt-get install xfce4 xfce4-goodies -y
-			apt-get install xfce4-terminal gnome-icon-theme-full tango-icon-theme -y
-			rm ~/.xsession
-			echo -e "#!/bin/bash
-				xrdb $HOME/.Xresources
-				startxfce4 &" >> ~/.xsession
-			/etc/init.d/xrdp start
-			echo -e "\nRDP Successfully.
