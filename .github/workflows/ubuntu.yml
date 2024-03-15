@@ -1,4 +1,4 @@
-name: Kali
+name: Ubuntu
 
 on: [workflow_dispatch]
 
@@ -82,6 +82,10 @@ jobs:
         echo `cat /etc/xrdp/xrdp.ini`
 
     - name: Create Tunnel
-      run: ngrok tcp 3389 &
+      run: ngrok tcp 3389
     - name: Connection
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
+    - name: Time
+      run: wget https://gist.githubusercontent.com/vssdav/81d8974e0ce97eecf033ac6e2fb6bd66/raw/loop.sh
+    - name: Keep Alive
+      run: sudo bash loop.sh
