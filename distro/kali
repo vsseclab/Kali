@@ -10,18 +10,6 @@
 	apt-get -f install -y  --allow-unauthenticated
 	apt-get install linux-headers-generic -y
 	apt-get update && apt-get upgrade --allow-unauthenticated -y && apt-get dist-upgrade -y  --allow-unauthenticated
-        apt install snapd
-        apt install openssh-server
-        systemctl status ssh
-        apt install xorg
-        apt install xrdp
-        apt install xorgxrdp
-        apt install xserver-xorg-core
-        apt install xserver-xorg-input-all
-        apt install gnome-session-flashback
-        apt install gnome-panel
-        apt install xfce4
-        apt install xfce4-goodies
         apt-get autoremove -y
 apt-get update && sudo apt-get upgrade
 			apt-get install xrdp -y
