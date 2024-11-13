@@ -15,9 +15,6 @@
         apt install xfonts-base
         apt install xfonts-75dpi
         apt install xfonts-100dpi
-        apt install mate-core
-        apt install mate-desktop-environment
-        apt install mate-notification-daemon
         apt install ubuntu-gnome-desktop
         apt install gnome-session-flashback
         apt install gnome-panel
